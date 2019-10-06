@@ -104,46 +104,37 @@ namespace Trivia
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>True if play should continue</returns>
         public bool wasCorrectlyAnswered()
         {
-            if (CurrentPlayer.IsInPenaltyBox)
+            if (CurrentPlayer.IsInPenaltyBox && !isGettingOutOfPenaltyBox)
             {
-                if (isGettingOutOfPenaltyBox)
-                {
-                    Console.WriteLine("Answer was correct!!!!");
-                    CurrentPlayer.Purse++;
-                    Console.WriteLine(CurrentPlayerName
-                            + " now has "
-                            + CurrentPlayer.Purse
-                            + " Gold Coins.");
-
-                    bool winner = didPlayerWin();
-                    MoveToNextPlayer();
-
-                    return winner;
-                }
-                else
-                {
-                    MoveToNextPlayer();
-                    return true;
-                }
+                MoveToNextPlayer();
+                return true;
             }
             else
             {
-                Console.WriteLine("Answer was corrent!!!!");
+                Console.WriteLine("Answer was correct!!!!");
                 CurrentPlayer.Purse++;
                 Console.WriteLine(CurrentPlayerName
                         + " now has "
                         + CurrentPlayer.Purse
                         + " Gold Coins.");
 
-                bool winner = didPlayerWin();
+                bool winner = PlayerDidNotWin();
                 MoveToNextPlayer();
 
                 return winner;
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>True if play should continue</returns>
         public bool wrongAnswer()
         {
             Console.WriteLine("Question was incorrectly answered");
@@ -154,9 +145,9 @@ namespace Trivia
         }
 
 
-        private bool didPlayerWin()
+        private bool PlayerDidNotWin()
         {
-            return !(CurrentPlayer.Purse == 6);
+            return CurrentPlayer.Purse != 6;
         }
     }
 
