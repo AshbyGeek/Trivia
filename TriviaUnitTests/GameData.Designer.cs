@@ -79,7 +79,7 @@ namespace Trivia.UnitTests {
         ///Pat&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled  [rest of string was truncated]&quot;;.
@@ -102,14 +102,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 3
         ///Pat&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 4
@@ -133,14 +133,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 1
         ///Pat&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 1
@@ -164,14 +164,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 5
         ///Pat&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 3 [rest of string was truncated]&quot;;.
@@ -194,14 +194,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 3
         ///Pat&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 1
@@ -225,14 +225,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 2
         ///Pat&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 3
@@ -256,7 +256,7 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 5
@@ -293,7 +293,7 @@ namespace Trivia.UnitTests {
         ///Pat&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have r [rest of string was truncated]&quot;;.
@@ -316,14 +316,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 2
         ///Pat&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 5 [rest of string was truncated]&quot;;.
@@ -346,14 +346,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 1
         ///Pat&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 2
@@ -377,14 +377,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 4
         ///Pat&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 4
@@ -408,14 +408,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 3
         ///Pat&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 1
@@ -439,14 +439,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 1
         ///Pat&apos;s new location is 1
         ///The category is Science
         ///Science Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a [rest of string was truncated]&quot;;.
@@ -469,14 +469,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 5
         ///Pat&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 1
@@ -500,14 +500,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 3
         ///Pat&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 3
@@ -531,14 +531,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 2
         ///Pat&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 5
@@ -562,14 +562,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 5
         ///Pat&apos;s new location is 5
         ///The category is Science
         ///Science Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a [rest of string was truncated]&quot;;.
@@ -599,7 +599,7 @@ namespace Trivia.UnitTests {
         ///Pat&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled  [rest of string was truncated]&quot;;.
@@ -622,14 +622,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 2
         ///Pat&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 2 [rest of string was truncated]&quot;;.
@@ -652,14 +652,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 1
         ///Pat&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 4
@@ -683,7 +683,7 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 4
@@ -713,14 +713,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 3
         ///Pat&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 4
@@ -744,14 +744,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 1
         ///Pat&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 1 [rest of string was truncated]&quot;;.
@@ -774,14 +774,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 5
         ///Pat&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 3
@@ -812,7 +812,7 @@ namespace Trivia.UnitTests {
         ///Pat&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have [rest of string was truncated]&quot;;.
@@ -835,14 +835,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 2
         ///Pat&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 3
@@ -866,14 +866,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 5
         ///Pat&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 5 [rest of string was truncated]&quot;;.
@@ -896,14 +896,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 4
         ///Pat&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 2
@@ -927,14 +927,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 2
         ///Pat&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 5
@@ -958,14 +958,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 1
         ///Pat&apos;s new location is 1
         ///The category is Science
         ///Science Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a [rest of string was truncated]&quot;;.
@@ -988,14 +988,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 4
         ///Pat&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 4
@@ -1019,14 +1019,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 3
         ///Pat&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 2
@@ -1050,14 +1050,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 1
         ///Pat&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 4
@@ -1081,14 +1081,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 5
         ///Pat&apos;s new location is 5
         ///The category is Science
         ///Science Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a [rest of string was truncated]&quot;;.
@@ -1140,14 +1140,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 2
         ///Pat&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 1 [rest of string was truncated]&quot;;.
@@ -1170,14 +1170,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 5
         ///Pat&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 3
@@ -1201,14 +1201,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 4
         ///Pat&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 5
@@ -1232,14 +1232,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 2
         ///Pat&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 2
@@ -1263,7 +1263,7 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 1
@@ -1293,14 +1293,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 4
         ///Pat&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 2
@@ -1331,7 +1331,7 @@ namespace Trivia.UnitTests {
         ///Pat&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They ha [rest of string was truncated]&quot;;.
@@ -1354,14 +1354,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 1
         ///Pat&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 1
@@ -1385,14 +1385,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 5
         ///Pat&apos;s new location is 5
         ///The category is Science
         ///Science Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a [rest of string was truncated]&quot;;.
@@ -1415,14 +1415,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 3
         ///Pat&apos;s new location is 3
         ///The category is Rock
         ///Rock Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 1
@@ -1446,14 +1446,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 2
         ///Pat&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 1
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 3
@@ -1477,14 +1477,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 5
         ///Pat&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 5
@@ -1508,14 +1508,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 4
         ///Pat&apos;s new location is 4
         ///The category is Pop
         ///Pop Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 3
@@ -1539,7 +1539,7 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 5
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 2
@@ -1569,14 +1569,14 @@ namespace Trivia.UnitTests {
         ///Chet&apos;s new location is 2
         ///The category is Sports
         ///Sports Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Chet now has 1 Gold Coins.
         ///Pat is the current player
         ///They have rolled a 1
         ///Pat&apos;s new location is 1
         ///The category is Science
         ///Science Question 0
-        ///Answer was corrent!!!!
+        ///Answer was correct!!!!
         ///Pat now has 1 Gold Coins.
         ///Sue is the current player
         ///They have rolled a 2 [rest of string was truncated]&quot;;.

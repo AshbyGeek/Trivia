@@ -18,6 +18,9 @@ namespace Trivia.UnitTests
         [DataRow(7)]
         [DataRow(8)]
         [DataRow(9)]
+        public void TestGameRunsSameAsOriginal_00_09(int seed) => TestGameRunsSameAsOriginal(seed);
+
+        [DataTestMethod]
         [DataRow(10)]
         [DataRow(11)]
         [DataRow(12)]
@@ -28,6 +31,9 @@ namespace Trivia.UnitTests
         [DataRow(17)]
         [DataRow(18)]
         [DataRow(19)]
+        public void TestGameRunsSameAsOriginal_10_19(int seed) => TestGameRunsSameAsOriginal(seed);
+
+        [DataTestMethod]
         [DataRow(20)]
         [DataRow(21)]
         [DataRow(22)]
@@ -38,6 +44,9 @@ namespace Trivia.UnitTests
         [DataRow(27)]
         [DataRow(28)]
         [DataRow(29)]
+        public void TestGameRunsSameAsOriginal_20_29(int seed) => TestGameRunsSameAsOriginal(seed);
+
+        [DataTestMethod]
         [DataRow(30)]
         [DataRow(31)]
         [DataRow(32)]
@@ -48,6 +57,9 @@ namespace Trivia.UnitTests
         [DataRow(37)]
         [DataRow(38)]
         [DataRow(39)]
+        public void TestGameRunsSameAsOriginal_30_39(int seed) => TestGameRunsSameAsOriginal(seed);
+
+        [DataTestMethod]
         [DataRow(40)]
         [DataRow(41)]
         [DataRow(42)]
@@ -58,7 +70,9 @@ namespace Trivia.UnitTests
         [DataRow(47)]
         [DataRow(48)]
         [DataRow(49)]
-        public void TestGameRunsSameAsOriginal(int seed)
+        public void TestGameRunsSameAsOriginal_40_49(int seed) => TestGameRunsSameAsOriginal(seed);
+
+        private void TestGameRunsSameAsOriginal(int seed)
         {
             using var writer = new StringWriter();
 
@@ -68,11 +82,18 @@ namespace Trivia.UnitTests
             GameRunner.RunGame(new Random(seed));
 
             writer.Flush();
-            Assert.AreEqual(GameData.ResourceManager.GetString($"Game{seed:00}"), writer.ToString());
+
+            var originalLines = GameData.ResourceManager.GetString($"Game{seed:00}").Split("\r\n".ToCharArray());
+            var newLines = writer.ToString().Split("\r\n".ToCharArray());
+
+            for (int i = 0; i < originalLines.Length && i < newLines.Length; i++)
+            {
+                Assert.AreEqual(originalLines[i], newLines[i], true, "Line number " + i + " is different.");
+            }
+
+            CollectionAssert.AreEqual(originalLines, newLines);
 
             Console.SetOut(oldOut);
         }
-
-
     }
 }
