@@ -50,6 +50,7 @@ namespace Trivia
         public static void RunGame(Random rand)
         {
             Game aGame = new Game();
+            var view = new GameView(aGame);
             bool notAWinner;
 
             aGame.add("Chet");

@@ -16,6 +16,25 @@ namespace Trivia
 
         Player CurrentPlayer => players[currentPlayer];
 
+        public class PlayerAddedEventArgs : EventArgs
+        {
+            public string PlayerName;
+
+            /// <summary>
+            /// The player's placement in turn order
+            /// </summary>
+            public int PlayerNumber;
+        }
+        public event EventHandler<PlayerAddedEventArgs> PlayerAdded;
+        protected void OnPlayerAdded(string playerName, int playerNumber)
+        {
+            PlayerAdded?.Invoke(this, new PlayerAddedEventArgs
+            {
+                PlayerName = playerName,
+                PlayerNumber = playerNumber,
+            });
+        }
+
         public Game()
         {
             questions.MakeDumbDefaultQuestions();
@@ -24,9 +43,7 @@ namespace Trivia
         public bool add(String playerName)
         {
             players.Add(new Player(playerName));
-
-            Console.WriteLine(playerName + " was added");
-            Console.WriteLine("They are player number " + players.Count);
+            OnPlayerAdded(playerName, players.Count);
             return true;
         }
         
