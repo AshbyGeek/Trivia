@@ -51,37 +51,24 @@ namespace Trivia
                 if (roll % 2 != 0)
                 {
                     isGettingOutOfPenaltyBox = true;
-
                     Console.WriteLine(CurrentPlayerName + " is getting out of the penalty box");
-                    CurrentPlayer.Place = CurrentPlayer.Place + roll;
-                    if (CurrentPlayer.Place > 11) CurrentPlayer.Place = CurrentPlayer.Place - 12;
-
-                    Console.WriteLine(CurrentPlayerName
-                            + "'s new location is "
-                            + CurrentPlayer.Place);
-                    Console.WriteLine("The category is " + currentCategory());
-                    askQuestion();
                 }
                 else
                 {
                     Console.WriteLine(CurrentPlayerName + " is not getting out of the penalty box");
                     isGettingOutOfPenaltyBox = false;
+                    return;
                 }
-
-            }
-            else
-            {
-
-                CurrentPlayer.Place = CurrentPlayer.Place + roll;
-                if (CurrentPlayer.Place > 11) CurrentPlayer.Place = CurrentPlayer.Place - 12;
-
-                Console.WriteLine(CurrentPlayerName
-                        + "'s new location is "
-                        + CurrentPlayer.Place);
-                Console.WriteLine("The category is " + currentCategory());
-                askQuestion();
             }
 
+            CurrentPlayer.Place += roll;
+            if (CurrentPlayer.Place > 11) CurrentPlayer.Place = CurrentPlayer.Place - 12;
+
+            Console.WriteLine(CurrentPlayerName
+                    + "'s new location is "
+                    + CurrentPlayer.Place);
+            Console.WriteLine("The category is " + currentCategory());
+            askQuestion();
         }
 
         private void askQuestion()
@@ -140,13 +127,9 @@ namespace Trivia
                     MoveToNextPlayer();
                     return true;
                 }
-
-
-
             }
             else
             {
-
                 Console.WriteLine("Answer was corrent!!!!");
                 CurrentPlayer.Purse++;
                 Console.WriteLine(CurrentPlayerName
