@@ -108,6 +108,15 @@ namespace Trivia
             };
         }
 
+        public void MoveToNextPlayer()
+        {
+            currentPlayer++;
+            if (currentPlayer == players.Count)
+            {
+                currentPlayer = 0;
+            }
+        }
+
         public bool wasCorrectlyAnswered()
         {
             if (CurrentPlayer.IsInPenaltyBox)
@@ -122,15 +131,13 @@ namespace Trivia
                             + " Gold Coins.");
 
                     bool winner = didPlayerWin();
-                    currentPlayer++;
-                    if (currentPlayer == players.Count) currentPlayer = 0;
+                    MoveToNextPlayer();
 
                     return winner;
                 }
                 else
                 {
-                    currentPlayer++;
-                    if (currentPlayer == players.Count) currentPlayer = 0;
+                    MoveToNextPlayer();
                     return true;
                 }
 
@@ -148,8 +155,7 @@ namespace Trivia
                         + " Gold Coins.");
 
                 bool winner = didPlayerWin();
-                currentPlayer++;
-                if (currentPlayer == players.Count) currentPlayer = 0;
+                MoveToNextPlayer();
 
                 return winner;
             }
@@ -160,9 +166,7 @@ namespace Trivia
             Console.WriteLine("Question was incorrectly answered");
             Console.WriteLine(CurrentPlayerName + " was sent to the penalty box");
             CurrentPlayer.IsInPenaltyBox = true;
-
-            currentPlayer++;
-            if (currentPlayer == players.Count) currentPlayer = 0;
+            MoveToNextPlayer();
             return true;
         }
 
