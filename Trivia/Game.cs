@@ -35,22 +35,59 @@ namespace Trivia
             });
         }
 
+        public event EventHandler<Player> CurrentPlayerChanged;
+        protected void OnCurrentPlayerChanged(Player newPlayer)
+        {
+            CurrentPlayerChanged?.Invoke(this, newPlayer);
+        }
+
+        public class PlayerRolledEventArgs : EventArgs
+        {
+            public int rollValue;
+        }
+        public event EventHandler<PlayerRolledEventArgs> PlayerRolled;
+        protected void OnPlayerRolled(int rollValue)
+        {
+            PlayerRolled.Invoke(this, new PlayerRolledEventArgs()
+            {
+                rollValue = rollValue,
+            });
+        }
+
+        public class PlayerTryEscapeEventArgs : EventArgs
+        {
+            public string playerName;
+            public bool succeeded;
+        }
+        public event EventHandler<PlayerTryEscapeEventArgs> PlayerAttemptedToEscapePenaltyBox;
+        protected void OnPlayerAttemptedToEscapePenaltyBox(bool success)
+        {
+            PlayerAttemptedToEscapePenaltyBox?.Invoke(this, new PlayerTryEscapeEventArgs
+            {
+                playerName = CurrentPlayer.Name,
+                succeeded = success,
+            });
+        }
+
+
+
         public Game()
         {
             questions.MakeDumbDefaultQuestions();
         }
-        
+
         public bool add(String playerName)
         {
             players.Add(new Player(playerName));
             OnPlayerAdded(playerName, players.Count);
             return true;
         }
-        
+
         public void roll(int roll)
         {
-            Console.WriteLine(CurrentPlayer.Name + " is the current player");
-            Console.WriteLine("They have rolled a " + roll);
+            OnCurrentPlayerChanged(CurrentPlayer);
+            OnPlayerRolled(roll);
+
 
             if (CurrentPlayer.IsInPenaltyBox)
             {

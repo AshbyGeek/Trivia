@@ -83,8 +83,8 @@ namespace Trivia.UnitTests
 
             writer.Flush();
 
-            var originalLines = GameData.ResourceManager.GetString($"Game{seed:00}").Split("\r\n".ToCharArray());
-            var newLines = writer.ToString().Split("\r\n".ToCharArray());
+            var originalLines = GameData.ResourceManager.GetString($"Game{seed:00}").Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+            var newLines = writer.ToString().Split("\r\n".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
             for (int i = 0; i < originalLines.Length && i < newLines.Length; i++)
             {
