@@ -64,9 +64,7 @@ namespace Trivia
             CurrentPlayer.Place += roll;
             if (CurrentPlayer.Place > 11) CurrentPlayer.Place = CurrentPlayer.Place - 12;
 
-            Console.WriteLine(CurrentPlayerName
-                    + "'s new location is "
-                    + CurrentPlayer.Place);
+            Console.WriteLine($"{CurrentPlayerName}'s new location is {CurrentPlayer.Place}");
             Console.WriteLine("The category is " + currentCategory());
             askQuestion();
         }
@@ -95,7 +93,7 @@ namespace Trivia
             };
         }
 
-        public void MoveToNextPlayer()
+        private void MoveToNextPlayer()
         {
             currentPlayer++;
             if (currentPlayer == players.Count)
@@ -119,15 +117,12 @@ namespace Trivia
             {
                 Console.WriteLine("Answer was correct!!!!");
                 CurrentPlayer.Purse++;
-                Console.WriteLine(CurrentPlayerName
-                        + " now has "
-                        + CurrentPlayer.Purse
-                        + " Gold Coins.");
+                Console.WriteLine($"{CurrentPlayer.Name} now has {CurrentPlayer.Purse} Gold Coins.");
 
-                bool winner = PlayerDidNotWin();
+                bool winner = PlayerWon();
                 MoveToNextPlayer();
 
-                return winner;
+                return !winner;
             }
         }
 
@@ -145,9 +140,9 @@ namespace Trivia
         }
 
 
-        private bool PlayerDidNotWin()
+        private bool PlayerWon()
         {
-            return CurrentPlayer.Purse != 6;
+            return CurrentPlayer.Purse >= 6;
         }
     }
 
