@@ -15,7 +15,6 @@ namespace Trivia
         bool isGettingOutOfPenaltyBox;
 
         Player CurrentPlayer => players[currentPlayer];
-        string CurrentPlayerName => CurrentPlayer.Name;
 
         public Game()
         {
@@ -33,7 +32,7 @@ namespace Trivia
         
         public void roll(int roll)
         {
-            Console.WriteLine(CurrentPlayerName + " is the current player");
+            Console.WriteLine(CurrentPlayer.Name + " is the current player");
             Console.WriteLine("They have rolled a " + roll);
 
             if (CurrentPlayer.IsInPenaltyBox)
@@ -41,11 +40,11 @@ namespace Trivia
                 if (roll % 2 != 0)
                 {
                     isGettingOutOfPenaltyBox = true;
-                    Console.WriteLine(CurrentPlayerName + " is getting out of the penalty box");
+                    Console.WriteLine(CurrentPlayer.Name + " is getting out of the penalty box");
                 }
                 else
                 {
-                    Console.WriteLine(CurrentPlayerName + " is not getting out of the penalty box");
+                    Console.WriteLine(CurrentPlayer.Name + " is not getting out of the penalty box");
                     isGettingOutOfPenaltyBox = false;
                     return;
                 }
@@ -54,7 +53,7 @@ namespace Trivia
             CurrentPlayer.Place += roll;
             if (CurrentPlayer.Place > 11) CurrentPlayer.Place = CurrentPlayer.Place - 12;
 
-            Console.WriteLine($"{CurrentPlayerName}'s new location is {CurrentPlayer.Place}");
+            Console.WriteLine($"{CurrentPlayer.Name}'s new location is {CurrentPlayer.Place}");
             Console.WriteLine("The category is " + currentCategory());
             askQuestion();
         }
@@ -123,7 +122,7 @@ namespace Trivia
         public bool wrongAnswer()
         {
             Console.WriteLine("Question was incorrectly answered");
-            Console.WriteLine(CurrentPlayerName + " was sent to the penalty box");
+            Console.WriteLine(CurrentPlayer.Name + " was sent to the penalty box");
             CurrentPlayer.IsInPenaltyBox = true;
             MoveToNextPlayer();
             return true;
