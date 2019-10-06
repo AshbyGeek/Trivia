@@ -1,7 +1,7 @@
 ﻿
 <Project Sdk="Microsoft.Net.SDK">
   <PropertyGroup>
-    <TargetFrameworks>net48</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.0</TargetFrameworks>
     <ApplicationIcon />
     <OutputType>Exe</OutputType>
     <StartupObject />
