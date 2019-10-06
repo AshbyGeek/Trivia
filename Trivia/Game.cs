@@ -21,12 +21,7 @@ namespace Trivia
         {
             questions.MakeDumbDefaultQuestions();
         }
-
-        public bool isPlayable()
-        {
-            return (howManyPlayers() >= 2);
-        }
-
+        
         public bool add(String playerName)
         {
             players.Add(new Player(playerName));
@@ -35,12 +30,7 @@ namespace Trivia
             Console.WriteLine("They are player number " + players.Count);
             return true;
         }
-
-        public int howManyPlayers()
-        {
-            return players.Count;
-        }
-
+        
         public void roll(int roll)
         {
             Console.WriteLine(CurrentPlayerName + " is the current player");
