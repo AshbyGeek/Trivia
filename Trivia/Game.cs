@@ -119,9 +119,9 @@ namespace Trivia
                 {
                     OnPlayerPurseChanged(player.Name, player.Purse);
                 }
-                else if (e.PropertyName == nameof(Player.Place))
+                else if (e.PropertyName == nameof(Player.Location))
                 {
-                    OnPlayerLocationChanged(player.Name, player.Place);
+                    OnPlayerLocationChanged(player.Name, player.Location);
                 }
             };
         }
@@ -153,7 +153,7 @@ namespace Trivia
 
             if (!CurrentPlayer.IsInPenaltyBox || isGettingOutOfPenaltyBox)
             {
-                CurrentPlayer.Place += roll;
+                CurrentPlayer.Location += roll;
                 AskQuestion();
             }
         }
@@ -167,7 +167,7 @@ namespace Trivia
 
         private String CurrentCategory()
         {
-            return CurrentPlayer.Place switch
+            return CurrentPlayer.Location switch
             {
                 0 => "Pop",
                 4 => "Pop",

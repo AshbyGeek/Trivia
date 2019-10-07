@@ -7,25 +7,25 @@ namespace Trivia
 {
     public class Player : INotifyPropertyChanged
     {
-        public const int NumberOfPlaces = 11;
+        public const int NumberOfLocations = 11;
 
         public Player(string name) => Name = name;
 
         public string Name { get; }
 
-        public int Place
+        public int Location
         {
-            get => _Place;
+            get => _Location;
             set
             {
-                if (value > NumberOfPlaces)
+                if (value > NumberOfLocations)
                 {
-                    value -= NumberOfPlaces + 1;
+                    value -= NumberOfLocations + 1;
                 }
-                _Place = value;
+                _Location = value;
             }
         }
-        private int _Place = 0;
+        private int _Location = 0;
 
         public int Purse { get; set; } = 0;
         
