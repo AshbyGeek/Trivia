@@ -9,7 +9,7 @@ namespace Trivia
 
     public class Game
     {
-        private readonly List<Player> players = new List<Player>();
+        private readonly ObservableCollectionItemChanged<Player> players = new ObservableCollectionItemChanged<Player>();
         private readonly Questions questions = new Questions();
 
         int currentPlayer = 0;
@@ -105,10 +105,29 @@ namespace Trivia
             });
         }
 
+
+
+
         public Game()
         {
             questions.MakeDumbDefaultQuestions();
+
+            players.ItemPropertyChanged += (s, e) =>
+            {
+                var player = s as Player;
+                if (e.PropertyName == nameof(Player.Purse))
+                {
+                    OnPlayerPurseChanged(player.Name, player.Purse);
+                }
+                else if (e.PropertyName == nameof(Player.Place))
+                {
+                    OnPlayerLocationChanged(player.Name, player.Place);
+                }
+            };
         }
+
+
+
 
         public bool Add(String playerName)
         {
@@ -135,10 +154,6 @@ namespace Trivia
             if (!CurrentPlayer.IsInPenaltyBox || isGettingOutOfPenaltyBox)
             {
                 CurrentPlayer.Place += roll;
-                if (CurrentPlayer.Place > 11) CurrentPlayer.Place = CurrentPlayer.Place - 12;
-
-                OnPlayerLocationChanged(CurrentPlayer.Name, CurrentPlayer.Place);
-
                 AskQuestion();
             }
         }
@@ -191,7 +206,6 @@ namespace Trivia
             {
                 OnQuestionAnswered(CurrentPlayer.Name, true);
                 CurrentPlayer.Purse++;
-                OnPlayerPurseChanged(CurrentPlayer.Name, CurrentPlayer.Purse);
 
                 bool winner = PlayerWon();
                 MoveToNextPlayer();
