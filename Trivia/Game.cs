@@ -88,28 +88,25 @@ namespace Trivia
             OnCurrentPlayerChanged(CurrentPlayer);
             OnPlayerRolled(roll);
 
-
             if (CurrentPlayer.IsInPenaltyBox)
             {
-                if (roll % 2 != 0)
-                {
-                    isGettingOutOfPenaltyBox = true;
-                    Console.WriteLine(CurrentPlayer.Name + " is getting out of the penalty box");
-                }
-                else
-                {
-                    Console.WriteLine(CurrentPlayer.Name + " is not getting out of the penalty box");
-                    isGettingOutOfPenaltyBox = false;
-                    return;
-                }
+                isGettingOutOfPenaltyBox = roll % 2 != 0;
+
+                //This would seem to be the logical bugfix but we are preserving the original functionality of this game exactly
+                //CurrentPlayer.IsInPenaltyBox = !isGettingOutOfPenaltyBox; 
+
+                OnPlayerAttemptedToEscapePenaltyBox(isGettingOutOfPenaltyBox);
             }
 
-            CurrentPlayer.Place += roll;
-            if (CurrentPlayer.Place > 11) CurrentPlayer.Place = CurrentPlayer.Place - 12;
+            if (!CurrentPlayer.IsInPenaltyBox || isGettingOutOfPenaltyBox)
+            {
+                CurrentPlayer.Place += roll;
+                if (CurrentPlayer.Place > 11) CurrentPlayer.Place = CurrentPlayer.Place - 12;
 
-            Console.WriteLine($"{CurrentPlayer.Name}'s new location is {CurrentPlayer.Place}");
-            Console.WriteLine("The category is " + currentCategory());
-            askQuestion();
+                Console.WriteLine($"{CurrentPlayer.Name}'s new location is {CurrentPlayer.Place}");
+                Console.WriteLine("The category is " + currentCategory());
+                askQuestion();
+            }
         }
 
         private void askQuestion()
