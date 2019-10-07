@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Trivia.Events;
 
 namespace Trivia
 {
@@ -16,15 +17,6 @@ namespace Trivia
 
         Player CurrentPlayer => players[currentPlayer];
 
-        public class PlayerAddedEventArgs : EventArgs
-        {
-            public string PlayerName;
-
-            /// <summary>
-            /// The player's placement in turn order
-            /// </summary>
-            public int PlayerNumber;
-        }
         public event EventHandler<PlayerAddedEventArgs> PlayerAdded;
         protected void OnPlayerAdded(string playerName, int playerNumber)
         {
@@ -35,40 +27,54 @@ namespace Trivia
             });
         }
 
-        public event EventHandler<Player> CurrentPlayerChanged;
-        protected void OnCurrentPlayerChanged(Player newPlayer)
+        public event EventHandler<PlayerEventArgs> CurrentPlayerChanged;
+        protected void OnCurrentPlayerChanged(string newCurrentPlayerName)
         {
-            CurrentPlayerChanged?.Invoke(this, newPlayer);
+            CurrentPlayerChanged?.Invoke(this, new PlayerEventArgs
+            {
+                PlayerName = newCurrentPlayerName
+            });
         }
 
-        public class PlayerRolledEventArgs : EventArgs
-        {
-            public int rollValue;
-        }
         public event EventHandler<PlayerRolledEventArgs> PlayerRolled;
-        protected void OnPlayerRolled(int rollValue)
+        protected void OnPlayerRolled(string playerName, int rollValue)
         {
             PlayerRolled.Invoke(this, new PlayerRolledEventArgs()
             {
-                rollValue = rollValue,
+                PlayerName = playerName,
+                RollValue = rollValue,
             });
         }
 
-        public class PlayerTryEscapeEventArgs : EventArgs
-        {
-            public string playerName;
-            public bool succeeded;
-        }
         public event EventHandler<PlayerTryEscapeEventArgs> PlayerAttemptedToEscapePenaltyBox;
-        protected void OnPlayerAttemptedToEscapePenaltyBox(bool success)
+        protected void OnPlayerAttemptedToEscapePenaltyBox(string playerName, bool success)
         {
             PlayerAttemptedToEscapePenaltyBox?.Invoke(this, new PlayerTryEscapeEventArgs
             {
-                playerName = CurrentPlayer.Name,
-                succeeded = success,
+                PlayerName = playerName,
+                Succeeded = success,
             });
         }
 
+        public event EventHandler<PlayerLocationChangedEventArgs> PlayerLocationChanged;
+        protected void OnPlayerLocationChanged(string playerName, int newLocation)
+        {
+            PlayerLocationChanged?.Invoke(this, new PlayerLocationChangedEventArgs
+            {
+                PlayerName = playerName,
+                newLocation = newLocation,
+            }) ;
+        }
+
+        public event EventHandler<QuestionAskedEventArgs> QuestionAsked;
+        protected void OnQuestionAsked(string category, string question)
+        {
+            QuestionAsked?.Invoke(this, new QuestionAskedEventArgs
+            {
+                Category = category,
+                Question = question,
+            });
+        }
 
 
         public Game()
@@ -85,8 +91,8 @@ namespace Trivia
 
         public void roll(int roll)
         {
-            OnCurrentPlayerChanged(CurrentPlayer);
-            OnPlayerRolled(roll);
+            OnCurrentPlayerChanged(CurrentPlayer.Name);
+            OnPlayerRolled(CurrentPlayer.Name, roll);
 
             if (CurrentPlayer.IsInPenaltyBox)
             {
@@ -95,7 +101,7 @@ namespace Trivia
                 //This would seem to be the logical bugfix but we are preserving the original functionality of this game exactly
                 //CurrentPlayer.IsInPenaltyBox = !isGettingOutOfPenaltyBox; 
 
-                OnPlayerAttemptedToEscapePenaltyBox(isGettingOutOfPenaltyBox);
+                OnPlayerAttemptedToEscapePenaltyBox(CurrentPlayer.Name, isGettingOutOfPenaltyBox);
             }
 
             if (!CurrentPlayer.IsInPenaltyBox || isGettingOutOfPenaltyBox)
@@ -103,20 +109,20 @@ namespace Trivia
                 CurrentPlayer.Place += roll;
                 if (CurrentPlayer.Place > 11) CurrentPlayer.Place = CurrentPlayer.Place - 12;
 
-                Console.WriteLine($"{CurrentPlayer.Name}'s new location is {CurrentPlayer.Place}");
-                Console.WriteLine("The category is " + currentCategory());
-                askQuestion();
+                OnPlayerLocationChanged(CurrentPlayer.Name, CurrentPlayer.Place);
+
+                AskQuestion();
             }
         }
 
-        private void askQuestion()
+        private void AskQuestion()
         {
-            string question = questions.GetAndDiscardQuestion(currentCategory());
-            Console.WriteLine(question);
+            string question = questions.GetAndDiscardQuestion(CurrentCategory());
+            OnQuestionAsked(CurrentCategory(), question);
         }
 
 
-        private String currentCategory()
+        private String CurrentCategory()
         {
             return CurrentPlayer.Place switch
             {
