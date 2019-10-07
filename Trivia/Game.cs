@@ -63,7 +63,7 @@ namespace Trivia
             {
                 PlayerName = playerName,
                 newLocation = newLocation,
-            }) ;
+            });
         }
 
         public event EventHandler<QuestionAskedEventArgs> QuestionAsked;
@@ -92,6 +92,16 @@ namespace Trivia
             PlayerSentToPenaltyBox?.Invoke(this, new PlayerEventArgs
             {
                 PlayerName = playerName,
+            });
+        }
+
+        public event EventHandler<PlayerPurseChangedEventArgs> PlayerPurseChanged;
+        protected void OnPlayerPurseChanged(string playerName, int newPurseValue)
+        {
+            PlayerPurseChanged?.Invoke(this, new PlayerPurseChangedEventArgs
+            {
+                PlayerName = playerName,
+                NewPurseValue = newPurseValue,
             });
         }
 
@@ -181,7 +191,7 @@ namespace Trivia
             {
                 OnQuestionAnswered(CurrentPlayer.Name, true);
                 CurrentPlayer.Purse++;
-                Console.WriteLine($"{CurrentPlayer.Name} now has {CurrentPlayer.Purse} Gold Coins.");
+                OnPlayerPurseChanged(CurrentPlayer.Name, CurrentPlayer.Purse);
 
                 bool winner = PlayerWon();
                 MoveToNextPlayer();

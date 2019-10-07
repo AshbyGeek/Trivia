@@ -20,6 +20,12 @@ namespace Trivia
             game.QuestionAsked += Game_QuestionAsked;
             game.QuestionAnswered += Game_QuestionAnswered;
             game.PlayerSentToPenaltyBox += Game_PlayerSentToPenaltyBox;
+            game.PlayerPurseChanged += Game_PlayerPurseChanged;
+        }
+
+        private void Game_PlayerPurseChanged(object sender, PlayerPurseChangedEventArgs e)
+        {
+            Console.WriteLine($"{e.PlayerName} now has {e.NewPurseValue} Gold Coins.");
         }
 
         private void Game_PlayerSentToPenaltyBox(object sender, PlayerEventArgs e)
