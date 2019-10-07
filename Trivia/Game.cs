@@ -110,14 +110,14 @@ namespace Trivia
             questions.MakeDumbDefaultQuestions();
         }
 
-        public bool add(String playerName)
+        public bool Add(String playerName)
         {
             players.Add(new Player(playerName));
             OnPlayerAdded(playerName, players.Count);
             return true;
         }
 
-        public void roll(int roll)
+        public void Roll(int roll)
         {
             OnCurrentPlayerChanged(CurrentPlayer.Name);
             OnPlayerRolled(CurrentPlayer.Name, roll);

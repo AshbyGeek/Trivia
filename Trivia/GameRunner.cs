@@ -53,14 +53,14 @@ namespace Trivia
             var view = new GameView(aGame);
             bool notAWinner;
 
-            aGame.add("Chet");
-            aGame.add("Pat");
-            aGame.add("Sue");
+            aGame.Add("Chet");
+            aGame.Add("Pat");
+            aGame.Add("Sue");
 
             do
             {
 
-                aGame.roll(rand.Next(5) + 1);
+                aGame.Roll(rand.Next(5) + 1);
 
                 if (rand.Next(9) == 7)
                 {
