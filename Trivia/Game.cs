@@ -76,6 +76,24 @@ namespace Trivia
             });
         }
 
+        public event EventHandler<QuestionAnsweredEventArgs> QuestionAnswered;
+        protected void OnQuestionAnswered(string playerName, bool correctAnswer)
+        {
+            QuestionAnswered?.Invoke(this, new QuestionAnsweredEventArgs
+            {
+                PlayerName = playerName,
+                CorrectAnswer = correctAnswer,
+            });
+        }
+
+        public event EventHandler<PlayerEventArgs> PlayerSentToPenaltyBox;
+        protected void OnPlayerSentToPenaltyBox(string playerName)
+        {
+            PlayerSentToPenaltyBox?.Invoke(this, new PlayerEventArgs
+            {
+                PlayerName = playerName,
+            });
+        }
 
         public Game()
         {
@@ -152,7 +170,7 @@ namespace Trivia
         /// 
         /// </summary>
         /// <returns>True if play should continue</returns>
-        public bool wasCorrectlyAnswered()
+        public bool WasCorrectlyAnswered()
         {
             if (CurrentPlayer.IsInPenaltyBox && !isGettingOutOfPenaltyBox)
             {
@@ -161,7 +179,7 @@ namespace Trivia
             }
             else
             {
-                Console.WriteLine("Answer was correct!!!!");
+                OnQuestionAnswered(CurrentPlayer.Name, true);
                 CurrentPlayer.Purse++;
                 Console.WriteLine($"{CurrentPlayer.Name} now has {CurrentPlayer.Purse} Gold Coins.");
 
@@ -176,11 +194,11 @@ namespace Trivia
         /// 
         /// </summary>
         /// <returns>True if play should continue</returns>
-        public bool wrongAnswer()
+        public bool WrongAnswer()
         {
-            Console.WriteLine("Question was incorrectly answered");
-            Console.WriteLine(CurrentPlayer.Name + " was sent to the penalty box");
+            OnQuestionAnswered(CurrentPlayer.Name, false);
             CurrentPlayer.IsInPenaltyBox = true;
+            OnPlayerSentToPenaltyBox(CurrentPlayer.Name);
             MoveToNextPlayer();
             return true;
         }
